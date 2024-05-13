@@ -18,7 +18,8 @@ section.grid{
     padding: 2rem;
 }
 
-section.grid > article{
+section.grid > article {
+    color: rgb(0, 0, 41);
     width: 80px;
     height: 80px;
     display: flex;
@@ -26,24 +27,36 @@ section.grid > article{
     align-items: center;
     align-content: center;
     font-weight: bold;
-    color: white;
-    border: 2px solid white;
     border-radius: .25rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
+    border: 2px solid white;
+    color: white;
 }
 
-section.grid > article.bg-aqua{
+section.grid > article > p.content {
+    display: none;
+}
+
+section.grid > article.clicked > p.content{
+    display: block;
+}
+
+section.grid > article.clicked{
+    background-color: rgb(18, 18, 165);
+}
+
+section.grid > article.clicked.bg-aqua{
     background-color: rgb(149, 255, 255);
     color: rgb(0, 0, 41);
 }
 
-section.grid > article.bg-yellow{
+section.grid > article.clicked.bg-yellow{
     background-color: rgb(255, 238, 0);
     color: rgb(0, 0, 41);
 }
 
-section.grid > article.bg-green{
+section.grid > article.clicked.bg-green{
     background-color: rgb(41, 255, 84);
     color: rgb(0, 0, 41);
 }

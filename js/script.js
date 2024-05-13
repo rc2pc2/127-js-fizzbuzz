@@ -16,7 +16,13 @@ for (let index = 1; index <= 100; index++) {
         newArticle.classList.add('bg-aqua');
     } 
 
-    newArticle.append(content);
+    newArticle.innerHTML = `<p class='content'>${content}</p>`;
+
+    newArticle.addEventListener('click', function(){
+        console.log(content);
+        newArticle.classList.add('clicked');
+    });
+
     gridElement.appendChild(newArticle);
-    console.log(content);
+    // console.log(content);
 }
